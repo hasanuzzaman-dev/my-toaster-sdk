@@ -40,12 +40,14 @@ afterEvaluate {
     publishing {
         publications {
             release(MavenPublication) {
-                from components.findByName('release')
+                from components.findByName('mysdklibrary-release.aar')
 //                from components.release
 
                 groupId = 'com.github.hasanuzzaman-dev'
                 artifactId = 'mysdklibrary'
                 version = '1.0.0'
+
+//                artifacts("$buildDir/outputs/aar/mysdklibrary-release.aar")
             }
         }
     }
